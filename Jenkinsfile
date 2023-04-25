@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('docker-push') {
+      steps {
+        sh 'docker login'
+      }
+    }
+
   }
 }
