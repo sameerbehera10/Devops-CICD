@@ -12,20 +12,9 @@ pipeline {
       }
     }
 
-    stage('maven-compile') {
+    stage('maven-build') {
       steps {
-        sh 'mvn clean compile'
-      }
-    }
-    
-    stage('maven-test') {
-      steps {
-        sh "mvn clean test"
-      }
-    }
-    stage('maven-pkg') {
-      steps {
-        sh "mvn clean package"
+        sh 'mvn clean package'
       }
     }
 
