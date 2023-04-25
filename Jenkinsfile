@@ -20,7 +20,7 @@ pipeline {
 
     stage('docker-image') {
       steps {
-        sh 'docker build -t webapp .'
+        sh 'sudo docker build -t webapp .'
       }
     }
 
