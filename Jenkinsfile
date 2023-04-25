@@ -26,7 +26,8 @@ pipeline {
 
     stage('docker-push-image') {
       steps {
-        sh 'sudo docker push webapp'
+        sh 'sudo docker tag webapp:latest ram1docker/webapp'
+        sh 'sudo docker push webapp:latest'
       }
     }
 
