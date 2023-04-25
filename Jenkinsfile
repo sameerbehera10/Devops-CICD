@@ -18,15 +18,15 @@ pipeline {
       }
     }
 
-    stage('docker-image') {
+    stage('docker-build-image') {
       steps {
         sh 'sudo docker build -t webapp .'
       }
     }
 
-    stage('docker-push') {
+    stage('docker-push-image') {
       steps {
-        sh 'docker push webapp'
+        sh 'sudo docker push webapp'
       }
     }
 
