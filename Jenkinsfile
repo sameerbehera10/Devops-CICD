@@ -26,7 +26,7 @@ pipeline {
 
     stage('docker-push') {
       steps {
-        sh 'docker login'
+        sh 'docker push webapp'
       }
     }
 
