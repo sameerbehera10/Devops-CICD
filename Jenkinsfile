@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('docker push image') {
+      steps {
+        sh 'sudo docker push ram1docker/javaapp:latest'
+      }
+    }
+
   }
 }
