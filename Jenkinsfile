@@ -20,7 +20,7 @@ pipeline {
 
     stage('docker build image') {
       steps {
-        sh 'docker build -t javaapp -f /home/ubuntu/jenkins/workspace/Docker-deploy_main .'
+        sh 'sudo docker build -t javaapp -f /home/ubuntu/jenkins/workspace/Docker-deploy_main .'
       }
     }
 
